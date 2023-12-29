@@ -1,0 +1,45 @@
+.container{
+    margin-bottom: 40px;
+}
+
+.container h1{
+    margin-top: 60px;
+    margin-bottom: 16px;
+    font-weight: bold;
+}
+
+.box{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.subset{
+    background-color: var(--softBg);
+    color: var(--textColor);
+    border: 2px solid white;
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    height: 40px;
+    flex: 0 0 calc(33.33% - 20px);
+    margin: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+.imgContainer{
+    position: relative;
+    height: 30px;
+    width: 30px;
+}
+
+@media screen and (max-width: 768px){
+    .subset{
+        flex-basis: calc(50% - 20px);
+    }
+}

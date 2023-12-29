@@ -1,0 +1,84 @@
+  .purple {
+    color: rgb(161, 49, 161);
+  }
+  
+  .container{
+    margin-top: 20px;
+  }
+  
+  .box{
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+  
+  .imgContainer{
+    flex: 1;
+    position: relative;
+    width:200px;
+    height:320px;
+  }
+  .image{
+    object-fit: cover;
+    border: none;
+    border-radius: 10px;
+  }
+  .textContainer{
+    flex: 2;
+    display:flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .boxDesc{
+    font-size:20px;
+    font-weight: 300;
+    color: var(--softTextColor);
+  }
+  
+  .button{
+    padding: 16px 20px;
+    background: linear-gradient(#71d5ee,#c234f7);
+    border: none;
+    border-radius: 10px;
+    width: max-content;
+    color: white;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+  }
+  
+  @media only screen and (min-width: 1000px) and (max-width: 1280px) {
+    .title{
+        font-size:2rem;
+    }
+    .boxTitle{
+        font-size: 1.4rem;
+    }
+    
+  }
+  
+  @media  screen and (max-width: 1000px) {
+    .title{
+      font-size: 1.6rem;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    .title{
+        font-size:1.2rem;
+        font-weight: lighter;
+    }
+    .box{
+        flex-direction: column;
+    }
+    .boxTitle{
+        font-size: 1.2rem;
+    }
+    .boxDesc{
+        font-size:1rem;
+        font-weight: 180; 
+    }
+  }
+  
+  
