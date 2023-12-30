@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import styles from "./intro.module.css";
 const Intro = () => {
   return (
@@ -18,9 +19,14 @@ const Intro = () => {
                 Institute of Technology, Dharwad, India.
               </p>
               <p className={styles.boxDesc}>
-                I have experience working with React and Django.
+                I have experience working with React, Next.js and Django.
               </p>
-              <button className={styles.button}>Visit Github</button>
+              <Link
+                href="https://github.com/ParikshitGehlaut"
+                className={styles.button}
+              >
+                Visit Github
+              </Link>
             </div>
             <div className={styles.imgContainer}>
               <Image
