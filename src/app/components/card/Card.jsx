@@ -2,28 +2,42 @@ import React from "react";
 import styles from "./card.module.css";
 import Image from "next/image";
 import Link from "next/link";
-const Card = () => {
+const Card = ({ post }) => {
+  // console.log(post);
   // const { Title, Excerpt } = blog.attributes;
   // const imageUrl =
-  //   "http://127.0.0.1:1337" +
-  //   blog.attributes.Blogimage.data.attributes.formats.thumbnail.url;
+  //   "https://images.pexels.com/photos/18178855/pexels-photo-18178855/free-photo-of-sculpture-of-cragg-by-heydar-aliyev-center.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2";
   return (
-    <div className={styles.card}>
-      <div className={styles.cardImgContainer}>
-        <Image src="/w1.jpg" alt="blog image" fill className={styles.cardImg} />
-      </div>
-      <div className={styles.cardTextContainer}>
-        <div className={styles.cardTitle}>Lorem ipsum dolor sit amet.</div>
-        <div className={styles.cardDesc}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
-          blanditiis, error obcaecati at tenetur reprehenderit numquam quidem
-          quia adipisci? Obcaecati, rerum et dignissimos ipsum aliquid sunt!
+    <>
+      <Link href={post.link}>
+        <div className={styles.card}>
+          {/* {post.img ? (
+        <div className={styles.cardImgContainer}>
+          <Image
+            src={post.img}
+            alt="blog image"
+            fill
+            className={styles.cardImg}
+          />
         </div>
-        <Link href="/blog" className={styles.btn}>
-          Read More{" "}
-        </Link>
-      </div>
-    </div>
+      ) : (
+        <div className={styles.cardImgContainer}>
+          <Image
+            src={imageUrl}
+            alt="blog image"
+            fill
+            className={styles.cardImg}
+          />
+        </div>
+      )} */}
+          <div className={styles.cardTextContainer}>
+            <div className={styles.cardTitle}>{post.title}</div>
+            <div className={styles.cardDesc}>{post.desc}</div>
+            <div className={styles.date}>{post.date}</div>
+          </div>
+        </div>
+      </Link>
+    </>
   );
 };
 
