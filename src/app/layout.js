@@ -21,6 +21,7 @@ export default function RootLayout({ children }) {
           name="google-site-verification"
           content="fzo1OSEJ39iT3DzacFMoPBj6BCVK0w_6kV_ts7EJlv4"
         />
+        <meta name="robots" content="index, follow"></meta>
       </head>
       <body className={inter.className}>
         <div className="container">
