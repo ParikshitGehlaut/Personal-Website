@@ -14,19 +14,25 @@ const Footer = () => {
           Copyright &#169; All rights reserved | ParikshitGehlaut.com
         </p>
         <div className={styles.icons}>
-          <Link href="https://www.instagram.com/parikshitgehlaut/">
+          <Link
+            href="https://www.instagram.com/parikshitgehlaut/"
+            target="_blank"
+          >
             {" "}
             <Image src="/instagram.webp" alt="" height={25} width={25} />
           </Link>
-          <Link href="https://www.instagram.com/parikshitgehlaut/">
+          <Link href="https://medium.com/@parikshitgehlaut" target="_blank">
             {" "}
-            <Image src="/facebook.webp" alt="" height={25} width={25} />
+            <Image src="/medium.webp" alt="" height={25} width={25} />
           </Link>
-          <Link href="https://twitter.com/I_AM_PARIKSHIT">
+          <Link href="https://twitter.com/I_AM_PARIKSHIT" target="_blank">
             {" "}
-            <Image src="/twitter.webp" alt="" height={25} width={25} />
+            <Image src="/Twitter.webp" alt="" height={25} width={25} />
           </Link>
-          <Link href="https://www.linkedin.com/in/parikshit-gehlaut-612b1825b/">
+          <Link
+            href="https://www.linkedin.com/in/parikshit-gehlaut-612b1825b/"
+            target="_blank"
+          >
             {" "}
             <Image src="/linkedin.webp" alt="" height={25} width={25} />
           </Link>
@@ -42,14 +48,24 @@ const Footer = () => {
         </div>
         <div className={styles.list}>
           <span className={styles.listTitle}>Social</span>
-          <Link href="https://www.instagram.com/parikshitgehlaut/">
+          <Link
+            href="https://www.instagram.com/parikshitgehlaut/"
+            target="_blank"
+          >
             Instagram
           </Link>
-          <Link href="https://medium.com/@parikshitgehlaut">Medium</Link>
-          <Link href="https://www.linkedin.com/in/parikshit-gehlaut-612b1825b/">
+          <Link href="https://medium.com/@parikshitgehlaut" target="_blank">
+            Medium
+          </Link>
+          <Link
+            href="https://www.linkedin.com/in/parikshit-gehlaut-612b1825b/"
+            target="_blank"
+          >
             Linkedin
           </Link>
-          <Link href="https://twitter.com/I_AM_PARIKSHIT">Twitter</Link>
+          <Link href="https://twitter.com/I_AM_PARIKSHIT" target="_blank">
+            Twitter
+          </Link>
         </div>
       </div>
     </div>

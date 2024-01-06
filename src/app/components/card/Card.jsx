@@ -9,7 +9,7 @@ const Card = ({ post }) => {
   //   "https://images.pexels.com/photos/18178855/pexels-photo-18178855/free-photo-of-sculpture-of-cragg-by-heydar-aliyev-center.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2";
   return (
     <>
-      <Link href={post.link}>
+      <Link href={post.link} target="_blank">
         <div className={styles.card}>
           {/* {post.img ? (
         <div className={styles.cardImgContainer}>

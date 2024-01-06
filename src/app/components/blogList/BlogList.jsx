@@ -26,7 +26,7 @@ const BlogList = async () => {
   const posts = [
     {
       id: 1,
-      title: "ML",
+      title: "AI",
       desc: "Introduction to Basic Machine Learning Algorithms",
       date: "4 Jan, 2024",
       link: "https://medium.com/@parikshitgehlaut/intro-to-basic-ml-algorithms-afb84e58abb3",
@@ -37,6 +37,13 @@ const BlogList = async () => {
       desc: "How to Learn Web Development in 2024",
       date: "3 Jan, 2024",
       link: "https://medium.com/@parikshitgehlaut/how-to-learn-web-development-in-2024-30be729358ac",
+    },
+    {
+      id: 3,
+      title: "Web Development",
+      desc: "Must-Have VS Code Extensions for Web Developers",
+      date: "6 Jan, 2024",
+      link: "https://medium.com/@parikshitgehlaut/must-have-vs-code-extensions-for-web-developers-d9a184408029",
     },
   ];
   return (
