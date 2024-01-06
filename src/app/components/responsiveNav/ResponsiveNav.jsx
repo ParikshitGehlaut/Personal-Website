@@ -22,9 +22,15 @@ const ResponsiveNav = () => {
           <Link href="/" onClick={() => setOpen(!open)}>
             Home
           </Link>
-          <Link href="/blog">Blog</Link>
-          <Link href="/projects">Projects</Link>
-          <Link href="/contact">Contact Me</Link>
+          <Link href="/blog" onClick={() => setOpen(!open)}>
+            Blog
+          </Link>
+          <Link href="/project" onClick={() => setOpen(!open)}>
+            Projects
+          </Link>
+          <Link href="/contact" onClick={() => setOpen(!open)}>
+            Contact Me
+          </Link>
           <Link href="https://drive.google.com/drive/u/0/my-drive">
             <button
               className={styles.button}

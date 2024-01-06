@@ -8,8 +8,8 @@ const Intro = () => {
       <section className={styles.introSection}>
         <div className={styles.container}>
           <h1 className={styles.title}>
-            <b>Hello!</b> I'm <span className={styles.purple}>Parikshit.</span>{" "}
-            I am Passionate <b>Web developer</b> .
+            <b>Hello!</b> I'm <span className={styles.name}>Parikshit.</span> I
+            am Passionate <b>Web developer</b> .
           </h1>
           <div className={styles.box}>
             <div className={styles.textContainer}>
@@ -30,9 +30,11 @@ const Intro = () => {
             </div>
             <div className={styles.imgContainer}>
               <Image
-                src="/bg.jpg"
+                src="/personal.jpg"
                 alt="personal image"
-                fill
+                width={240}
+                height={320}
+                priority={true}
                 className={styles.image}
               />
             </div>

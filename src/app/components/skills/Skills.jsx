@@ -10,8 +10,9 @@ const Skills = () => {
           <div className={styles.imgContainer}>
             <Image
               src="/react.png"
-              alt="react logo"
-              fill
+              alt="reactJs logo"
+              height={30}
+              width={30}
               className={styles.logoimg}
             />
           </div>
@@ -21,8 +22,9 @@ const Skills = () => {
           <div className={styles.imgContainer}>
             <Image
               src="/next.webp"
-              alt="react logo"
-              fill
+              alt="Next.js logo"
+              height={30}
+              width={30}
               className={styles.logoimg}
             />
           </div>
@@ -33,7 +35,8 @@ const Skills = () => {
             <Image
               src="/mongodb.webp"
               alt="mongodb logo"
-              fill
+              height={30}
+              width={30}
               className={styles.logoimg}
             />
           </div>
@@ -44,7 +47,8 @@ const Skills = () => {
             <Image
               src="/python.webp"
               alt="python logo"
-              fill
+              height={30}
+              width={30}
               className={styles.logoimg}
             />
           </div>
@@ -55,7 +59,8 @@ const Skills = () => {
             <Image
               src="/django-logo.webp"
               alt="django logo"
-              fill
+              height={30}
+              width={30}
               className={styles.logoimg}
             />
           </div>
@@ -66,7 +71,8 @@ const Skills = () => {
             <Image
               src="/tailwind.webp"
               alt="tailwind logo"
-              fill
+              height={30}
+              width={30}
               className={styles.logoimg}
             />
           </div>

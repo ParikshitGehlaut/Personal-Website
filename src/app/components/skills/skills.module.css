@@ -34,8 +34,10 @@
 }
 .imgContainer{
     position: relative;
-    height: 30px;
-    width: 30px;
+}
+
+.logoimg{
+    object-fit: cover;
 }
 
 @media screen and (max-width: 768px){
