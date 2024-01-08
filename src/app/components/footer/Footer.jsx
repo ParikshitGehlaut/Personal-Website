@@ -30,7 +30,7 @@ const Footer = () => {
             <Image src="/Twitter.webp" alt="" height={25} width={25} />
           </Link>
           <Link
-            href="https://www.linkedin.com/in/parikshit-gehlaut-612b1825b/"
+            href="https://www.linkedin.com/in/parikshitgehlaut/"
             target="_blank"
           >
             {" "}
@@ -58,7 +58,7 @@ const Footer = () => {
             Medium
           </Link>
           <Link
-            href="https://www.linkedin.com/in/parikshit-gehlaut-612b1825b/"
+            href="https://www.linkedin.com/in/parikshitgehlaut/"
             target="_blank"
           >
             Linkedin

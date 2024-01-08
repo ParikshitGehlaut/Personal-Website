@@ -39,7 +39,7 @@ const Contact = () => {
             <Image src="/Twitter.webp" alt="" height={50} width={50} />
           </Link>
           <Link
-            href="https://www.linkedin.com/in/parikshit-gehlaut-612b1825b/"
+            href="https://www.linkedin.com/in/parikshitgehlaut/"
             target="_blank"
           >
             {" "}
