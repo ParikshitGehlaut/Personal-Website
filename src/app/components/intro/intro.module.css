@@ -46,7 +46,7 @@
     transition: all 0.3s ease-in-out;
     cursor: pointer;
   }
-  
+
   @media only screen and (min-width: 1000px) and (max-width: 1280px) {
     .title{
         font-size:2rem;

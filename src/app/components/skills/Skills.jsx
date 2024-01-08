@@ -3,11 +3,11 @@ import styles from "./skills.module.css";
 import Image from "next/image";
 const Skills = () => {
   return (
-    <div className={styles.container}>
+    <div className={styles.skillContainer}>
       <h1>Programming Skills</h1>
       <div className={styles.box}>
         <div className={styles.subset}>
-          <div className={styles.imgContainer}>
+          <div className={styles.skillImgContainer}>
             <Image
               src="/react.png"
               alt="reactJs logo"
@@ -19,7 +19,7 @@ const Skills = () => {
           <span>React</span>
         </div>
         <div className={styles.subset}>
-          <div className={styles.imgContainer}>
+          <div className={styles.skillImgContainer}>
             <Image
               src="/next.webp"
               alt="Next.js logo"
@@ -31,7 +31,7 @@ const Skills = () => {
           <span>Next.js</span>
         </div>
         <div className={styles.subset}>
-          <div className={styles.imgContainer}>
+          <div className={styles.skillImgContainer}>
             <Image
               src="/mongodb.webp"
               alt="mongodb logo"
@@ -43,7 +43,7 @@ const Skills = () => {
           <span>MongoDB</span>
         </div>
         <div className={styles.subset}>
-          <div className={styles.imgContainer}>
+          <div className={styles.skillImgContainer}>
             <Image
               src="/python.webp"
               alt="python logo"
@@ -55,7 +55,7 @@ const Skills = () => {
           <span>Python</span>
         </div>
         <div className={styles.subset}>
-          <div className={styles.imgContainer}>
+          <div className={styles.skillImgContainer}>
             <Image
               src="/django-logo.webp"
               alt="django logo"
@@ -67,7 +67,7 @@ const Skills = () => {
           <span>Django</span>
         </div>
         <div className={styles.subset}>
-          <div className={styles.imgContainer}>
+          <div className={styles.skillImgContainer}>
             <Image
               src="/tailwind.webp"
               alt="tailwind logo"
