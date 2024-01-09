@@ -28,6 +28,15 @@ const Project = () => {
       img: "https://imgs.search.brave.com/pGXTY50c7_lYusRzcdyOZcuvWIHQigon4brQd-YdPr0/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTMw/MTE3NDMzNS9waG90/by90by1kby1saXN0/LW9uLW5vdGUtcGFk/LmpwZz9zPTYxMng2/MTImdz0wJms9MjAm/Yz1oTmhLbmVFSm9i/VU1oejVJTldrSmF6/OFZjZ3VHMzRyamRC/ZVQ3ODlVaVlNPQ",
       // DeploymentLink: "",
     },
+    {
+      id: 3,
+      title: "Microsoft Website Clone",
+      desc: "Homepage of Microsoft official website consisting of responsive navbar, main content etc",
+      techStack: "Tailwindcss and HTML",
+      GithubLink: "https://github.com/ParikshitGehlaut/Microsoft-Clone",
+      img: "https://imgs.search.brave.com/3kojDUzBdpODCih3blcw5Rjbjt2VEtDHK95j6qKFRq8/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTQ1/OTM1OTAwMC9waG90/by9pc3N5LWxlcy1t/b3VsaW5lYXV4LWZy/YW5jZS10aGUtbG9n/by1vZi10aGUtdS1z/LWNvbXB1dGVyLWFu/ZC1taWNyby1jb21w/dXRpbmctY29tcGFu/eS1taWNyb3NvZnQu/anBnP3M9NjEyeDYx/MiZ3PTAmaz0yMCZj/PWhHcFljeDhkcHl3/LThHT2tyeWZHX0sy/MjBlMzM0ckIxcENT/OC1iN3dqcWM9",
+      // DeploymentLink: "",
+    },
   ];
 
   return (
