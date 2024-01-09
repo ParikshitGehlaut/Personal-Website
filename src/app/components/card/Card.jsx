@@ -1,41 +1,34 @@
 import React from "react";
 import styles from "./card.module.css";
-import Image from "next/image";
 import Link from "next/link";
+import { MotionDiv } from "../MotionDiv";
+
+const variants = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1 },
+};
+
 const Card = ({ post }) => {
-  // console.log(post);
-  // const { Title, Excerpt } = blog.attributes;
-  // const imageUrl =
-  //   "https://images.pexels.com/photos/18178855/pexels-photo-18178855/free-photo-of-sculpture-of-cragg-by-heydar-aliyev-center.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2";
   return (
     <>
       <Link href={post.link} target="_blank">
-        <div className={styles.card}>
-          {/* {post.img ? (
-        <div className={styles.cardImgContainer}>
-          <Image
-            src={post.img}
-            alt="blog image"
-            fill
-            className={styles.cardImg}
-          />
-        </div>
-      ) : (
-        <div className={styles.cardImgContainer}>
-          <Image
-            src={imageUrl}
-            alt="blog image"
-            fill
-            className={styles.cardImg}
-          />
-        </div>
-      )} */}
+        <MotionDiv
+          variants={variants}
+          initial="hidden"
+          animate="visible"
+          transition={{
+            delay: post.id * 0.3,
+            ease: "easeInOut",
+            duration: 0.5,
+          }}
+          className={styles.card}
+        >
           <div className={styles.cardTextContainer}>
             <div className={styles.cardTitle}>{post.title}</div>
             <div className={styles.cardDesc}>{post.desc}</div>
             <div className={styles.date}>{post.date}</div>
           </div>
-        </div>
+        </MotionDiv>
       </Link>
     </>
   );

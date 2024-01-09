@@ -2,10 +2,16 @@ import React from "react";
 import styles from "./project.module.css";
 import Image from "next/image";
 import Link from "next/link";
+import { MotionDiv } from "../components/MotionDiv";
 export const metadata = {
   title: "Projects",
   description:
     "Welcome to Project section, here all academic or personal Projects made by Parikshit are displayed. Click on the link provided to see deployed projects or check source code on Github.",
+};
+
+const variants = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1 },
 };
 
 const Project = () => {
@@ -43,7 +49,18 @@ const Project = () => {
     <div className={styles.container}>
       <h1 className={styles.pageTitle}>Projects</h1>
       {projects.map((project) => (
-        <div className={styles.item} key={project.id}>
+        <MotionDiv
+          variants={variants}
+          initial="hidden"
+          animate="visible"
+          transition={{
+            delay: project.id * 0.3,
+            ease: "easeInOut",
+            duration: 0.5,
+          }}
+          className={styles.item}
+          key={project.id}
+        >
           <div className={styles.content}>
             <h1 className={styles.title}>{project.title}</h1>
             <p className={styles.desc}>{project.desc}</p>
@@ -68,7 +85,7 @@ const Project = () => {
               alt=""
             />
           </div>
-        </div>
+        </MotionDiv>
       ))}
     </div>
   );

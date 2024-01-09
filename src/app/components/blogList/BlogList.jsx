@@ -1,28 +1,8 @@
 import React from "react";
 import styles from "./blogList.module.css";
 import Card from "../card/Card";
-// import { getposts } from "@/lib/data";
-
-// FETCH DATA WITH AN API
-// const getData = async () => {
-//   const res = await fetch("https://jsonplaceholder.typicode.com/posts", {
-//     cache: "no-store",
-//   });
-
-//   if (!res.ok) {
-//     throw new Error("Something went wrong");
-//   }
-
-//   return res.json();
-// };
 
 const BlogList = async () => {
-  // FETCH DATA WITHOUT AN API
-  // const posts = await getposts();
-
-  // FETCH DATA WITH AN API
-  // const posts = await getData();
-
   const posts = [
     {
       id: 1,
