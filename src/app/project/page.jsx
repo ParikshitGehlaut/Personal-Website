@@ -17,7 +17,7 @@ const variants = {
 const Project = () => {
   const projects = [
     {
-      id: 1,
+      id: 0,
       title: "NewsMonkey",
       desc: "Created a responsive news website, 'NewsMonkey,' using React and Bootstrap. Integrated real-time news updates from a News API. Implemented React Router for seamless navigation.",
       techStack: "React.js and Bootstrap",
@@ -26,7 +26,7 @@ const Project = () => {
       // DeploymentLink: "",
     },
     {
-      id: 2,
+      id: 1,
       title: "Todos List",
       desc: "Developed an intuitive single-page Todo List website with React and Bootstrap. Improved user productivity by allowing efficient task management.",
       techStack: "React.js",
@@ -35,7 +35,7 @@ const Project = () => {
       // DeploymentLink: "",
     },
     {
-      id: 3,
+      id: 2,
       title: "Microsoft Website Clone",
       desc: "Homepage of Microsoft official website consisting of responsive navbar, main content etc",
       techStack: "Tailwindcss and HTML",
@@ -54,7 +54,7 @@ const Project = () => {
           initial="hidden"
           animate="visible"
           transition={{
-            delay: project.id * 0.3,
+            delay: 0.1 + project.id * 0.5,
             ease: "easeInOut",
             duration: 0.5,
           }}
@@ -79,10 +79,11 @@ const Project = () => {
           <div className={styles.imgContainer}>
             <Image
               className={styles.img}
-              width={356}
-              height={320}
+              width={320}
+              height={356}
               src={project.img}
               alt=""
+              priority={true}
             />
           </div>
         </MotionDiv>
