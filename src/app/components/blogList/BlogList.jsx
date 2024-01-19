@@ -25,6 +25,13 @@ const BlogList = async () => {
       date: "6 Jan, 2024",
       link: "https://medium.com/@parikshitgehlaut/must-have-vs-code-extensions-for-web-developers-d9a184408029",
     },
+    {
+      id: 4,
+      title: "Web Development",
+      desc: "Next.js: Powering Modern Websites",
+      date: "19 Jan, 2024",
+      link: "https://medium.com/@parikshitgehlaut/next-js-powering-modern-websites-5e1b4d561276",
+    },
   ];
   return (
     <div className={styles.container}>
