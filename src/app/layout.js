@@ -1,10 +1,10 @@
-import { Poppins } from "next/font/google";
+import { Asul } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
-const poppins = Poppins({
+const asul = Asul({
   subsets: ["latin"],
-  weight: ["400", "800", "500", "600"],
+  weight: ["400", "700"],
 });
 
 export const metadata = {
@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
       <head>
         <meta name="robots" content="index, follow"></meta>
       </head>
-      <body className={poppins.className}>
+      <body className={asul.className}>
         <div className="container">
           <header>
             <Navbar />
