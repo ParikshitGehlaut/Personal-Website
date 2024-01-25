@@ -17,21 +17,31 @@ const Footer = () => {
           <Link
             href="https://www.instagram.com/parikshitgehlaut/"
             target="_blank"
+            title="Instagram"
           >
             {" "}
             <Image src="/instagram.webp" alt="" height={25} width={25} />
           </Link>
-          <Link href="https://medium.com/@parikshitgehlaut" target="_blank">
+          <Link
+            href="https://medium.com/@parikshitgehlaut"
+            target="_blank"
+            title="Medium"
+          >
             {" "}
             <Image src="/medium.webp" alt="" height={25} width={25} />
           </Link>
-          <Link href="https://twitter.com/I_AM_PARIKSHIT" target="_blank">
+          <Link
+            href="https://twitter.com/I_AM_PARIKSHIT"
+            target="_blank"
+            title="Twitter"
+          >
             {" "}
             <Image src="/Twitter.webp" alt="" height={25} width={25} />
           </Link>
           <Link
             href="https://www.linkedin.com/in/parikshitgehlaut/"
             target="_blank"
+            title="LinkedIn"
           >
             {" "}
             <Image src="/linkedin.webp" alt="" height={25} width={25} />
