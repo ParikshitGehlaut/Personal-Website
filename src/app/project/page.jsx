@@ -7,6 +7,7 @@ export const metadata = {
   title: "Projects",
   description:
     "Welcome to Project section, here all academic or personal Projects made by Parikshit are displayed. Click on the link provided to see deployed projects or check source code on Github.",
+  robots: "index, follow",
 };
 
 const variants = {

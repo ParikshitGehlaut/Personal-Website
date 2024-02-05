@@ -14,13 +14,13 @@ export const metadata = {
   },
   description:
     "Welcome to Parikshit Gehlaut's Portfolio.I am beginner Full Stack developer.With a passion for creating stunning, functional websites, I'm here to bring your online vision to life. Contact me today to discuss your next project",
+  robots: "index, follow",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <meta name="robots" content="index, follow"></meta>
         <meta
           name="google-site-verification"
           content="fzo1OSEJ39iT3DzacFMoPBj6BCVK0w_6kV_ts7EJlv4"
