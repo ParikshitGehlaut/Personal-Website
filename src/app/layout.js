@@ -21,6 +21,10 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <meta name="robots" content="index, follow"></meta>
+        <meta
+          name="google-site-verification"
+          content="fzo1OSEJ39iT3DzacFMoPBj6BCVK0w_6kV_ts7EJlv4"
+        />
       </head>
       <body className={asul.className}>
         <div className="container">
