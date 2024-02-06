@@ -2,8 +2,33 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import styles from "./responsiveNav.module.css";
+import { motion } from "framer-motion";
 const ResponsiveNav = () => {
   const [open, setOpen] = useState(false);
+  const topVariants = {
+    closed: {
+      rotate: 0,
+    },
+    opened: {
+      rotate: 45,
+    },
+  };
+  const secondVariants = {
+    closed: {
+      opacity: 1,
+    },
+    opened: {
+      opacity: 0,
+    },
+  };
+  const lastVariants = {
+    closed: {
+      rotate: 0,
+    },
+    opened: {
+      rotate: -45,
+    },
+  };
   return (
     <>
       <div
@@ -12,9 +37,21 @@ const ResponsiveNav = () => {
           setOpen(!open);
         }}
       >
-        <div className={styles.line}></div>
-        <div className={styles.line}></div>
-        <div className={styles.line}></div>
+        <motion.div
+          variants={topVariants}
+          animate={open ? "opened" : "closed"}
+          className={styles.firstLine}
+        ></motion.div>
+        <motion.div
+          variants={secondVariants}
+          animate={open ? "opened" : "closed"}
+          className={styles.secondLine}
+        ></motion.div>
+        <motion.div
+          variants={lastVariants}
+          animate={open ? "opened" : "closed"}
+          className={styles.lastLine}
+        ></motion.div>
       </div>
 
       {open && (

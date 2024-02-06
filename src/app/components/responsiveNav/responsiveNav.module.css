@@ -4,23 +4,38 @@
     display:none;  
 }
 
-.line{
+.firstLine{
+    width:100%;
+    height:2px;
+    background-color: var(--textColor);
+    transform-origin: left;
+}
+.secondLine{
     width:100%;
     height:2px;
     background-color: var(--textColor);
 }
+.lastLine{
+    width:100%;
+    height:2px;
+    background-color: var(--textColor);
+    transform-origin: left;
+}
+
 
 .responsiveMenu{
     position:absolute;
     padding-top: 80px;
     padding-bottom: 80px;
-    top: 0;
+    top: 100px;
     left:0;
-    background-color: var(--softBg);
-    height: 100vh;
+    background-color: var(--bg);
+    height: calc(
+        100vh - 100px
+    );
     display:flex;
     flex-direction: column;
-    width:50%;
+    width:100%;
     align-items:center;
     justify-items:center;
     gap:40px;
