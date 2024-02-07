@@ -3,7 +3,7 @@ import styles from "./navbar.module.css";
 import Link from "next/link";
 import ResponsiveNav from "../responsiveNav/ResponsiveNav";
 
-const Navbar = async () => {
+const Navbar = () => {
   return (
     <div className={styles.container}>
       <div className={styles.logo}>Parikshit's Portfolio</div>

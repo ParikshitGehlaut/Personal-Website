@@ -1,0 +1,78 @@
+  .nav{
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    background-color: var(--softBg);
+  }
+  
+  .container{
+    min-height: 100vh;
+    color: var(--textColor);
+    background-color: var(--bg);
+  }
+  
+  .wrapper{
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 0 80px;
+  }
+
+  .motionScreenone{
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    background-color: var(--textColor);
+    border: none;
+    border-radius: 0 0 100px 100px ;
+    z-index: 40;
+    color: var(--bg);
+  }
+  /* .motionScreentwo{
+    height: 100vh;
+    width: 100%;
+    bottom: 0;
+    position: fixed;
+    background-color: var(--textColor);
+    border: none;
+    border-radius: 100px 100px 0 0;
+    z-index: 30;
+  } */
+
+  .motionScreenpath{
+    position: fixed;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: var(--textColor);
+    width: fit-content;
+    height: fit-content;
+    cursor: default;
+    color: var(--bg);
+    z-index: 50;
+    font-size: 72px;
+    font-weight: 700;
+  }
+  
+  
+  @media only screen and (min-width: 768px) and (max-width: 1280px) {
+    /* Your styles for tablets go here */
+    .wrapper{
+        max-width: 92%;
+    }
+  }
+  @media only screen and (min-width: 1600px) {
+    /* Your styles for tablets go here */
+    .wrapper{
+        max-width: 80%;
+    }
+  }
+  
+  @media only screen and (max-width: 767px) {
+    .wrapper{
+        max-width: 100%;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+  }
