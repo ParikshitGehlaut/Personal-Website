@@ -16,7 +16,7 @@ const Contact = () => {
         <h1 className={styles.contactTitle}>Feel Free to contact Me</h1>
         <div className={styles.Contactimage}>
           <Image
-            src="/developer.png"
+            src="/myself.jpg"
             alt="contact image"
             fill
             className={styles.img}

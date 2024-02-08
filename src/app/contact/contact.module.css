@@ -30,3 +30,12 @@
     align-items: center;
     gap: 40px;
 }
+
+@media screen and (max-width: 440px){
+    .contactTitle{
+        font-size: 22px;
+    }
+    .icons{
+        gap: 20px;
+    }
+}

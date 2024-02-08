@@ -7,7 +7,15 @@ const Footer = () => {
     <div className={styles.container}>
       <div className={styles.info}>
         <div className={styles.logo}>
-          <Image src="/developer.png" alt="logo" height={50} width={50} />
+          <div className={styles.logoImageContainer}>
+            <Image
+              src="/myself.jpg"
+              alt="logo"
+              height={50}
+              width={50}
+              className={styles.logoImage}
+            />
+          </div>
           <h1 className={styles.logoText}>Parikshit</h1>
         </div>
         <p className={styles.desc}>
