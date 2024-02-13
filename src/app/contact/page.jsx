@@ -20,6 +20,8 @@ const Contact = () => {
             alt="contact image"
             fill
             className={styles.img}
+            priority
+            title="Parikshit Gehlaut"
           />
         </div>
         <div className={styles.icons}>
