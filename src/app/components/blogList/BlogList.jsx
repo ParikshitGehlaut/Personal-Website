@@ -32,6 +32,13 @@ const BlogList = async () => {
       date: "19 Jan, 2024",
       link: "https://medium.com/@parikshitgehlaut/next-js-powering-modern-websites-5e1b4d561276",
     },
+    {
+      id: 5,
+      title: "Web Development",
+      desc: "Build an Awesome Portfolio Website Using Next.js and Tailwind CSS.",
+      date: "12 Feb, 2024",
+      link: "https://medium.com/@parikshitgehlaut/build-an-awesome-portfolio-website-using-next-js-and-tailwind-css-a6ae5c343098",
+    },
   ];
   return (
     <div className={styles.container}>
