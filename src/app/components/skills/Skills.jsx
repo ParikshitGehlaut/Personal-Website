@@ -33,14 +33,14 @@ const Skills = () => {
         <div className={styles.subset}>
           <div className={styles.skillImgContainer}>
             <Image
-              src="/mongodb.webp"
-              alt="mongodb logo"
+              src="/C.png"
+              alt="C logo"
               height={30}
               width={30}
               className={styles.logoimg}
             />
           </div>
-          <span>MongoDB</span>
+          <span>C Programming</span>
         </div>
         <div className={styles.subset}>
           <div className={styles.skillImgContainer}>
@@ -69,14 +69,14 @@ const Skills = () => {
         <div className={styles.subset}>
           <div className={styles.skillImgContainer}>
             <Image
-              src="/tailwind.webp"
-              alt="tailwind logo"
+              src="/mongodb.webp"
+              alt="mongodb logo"
               height={30}
               width={30}
               className={styles.logoimg}
             />
           </div>
-          <span>Tailwindcss</span>
+          <span>MongoDB</span>
         </div>
       </div>
     </div>
