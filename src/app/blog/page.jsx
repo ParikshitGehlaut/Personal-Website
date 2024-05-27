@@ -4,7 +4,7 @@ import BlogList from "../components/blogList/BlogList";
 export const metadata = {
   title: "Blog",
   description:
-    "Welcome to Blog section! you can read written by Parikshit, that are available on medium.com",
+    "Welcome to Blog section! you can read written by Parikshit, that are available on Medium.com",
   robots: "index, follow",
 };
 

@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./blogList.module.css";
 import Card from "../card/Card";
 
-const BlogList = async () => {
+const BlogList = () => {
   const posts = [
     {
       id: 1,
@@ -38,6 +38,13 @@ const BlogList = async () => {
       desc: "Build an Awesome Portfolio Website Using Next.js and Tailwind CSS.",
       date: "12 Feb, 2024",
       link: "https://medium.com/@parikshitgehlaut/build-an-awesome-portfolio-website-using-next-js-and-tailwind-css-a6ae5c343098",
+    },
+    {
+      id: 6,
+      title: "Deep Learning",
+      desc: "Day 1: Introduction to PyTorch.",
+      date: "27 May, 2024",
+      link: "https://medium.com/@parikshitgehlaut/day-1-introduction-to-pytorch-ddea1da562dd",
     },
   ];
   return (

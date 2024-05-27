@@ -19,6 +19,16 @@ const Project = () => {
   const projects = [
     {
       id: 0,
+      title: "ToyRISC Processor Simulation",
+      desc: "ToyRISC processor simulation using Java, Computer Architecture lab, IIT Dharwad",
+      techStack: "Java and Assembly",
+      GithubLink:
+        "https://github.com/ParikshitGehlaut/ToyRISC_Processor_Simulator",
+      img: "https://na.ingrammicro.com/Ingram/media/Global-Content/EN-GLOBAL/i/integrated-solutions/images/Mobile-Chips-01-ISG-Dec-Blog.jpg",
+      // DeploymentLink: "",
+    },
+    {
+      id: 1,
       title: "NewsMonkey",
       desc: "Created a responsive news website, 'NewsMonkey,' using React and Bootstrap. Integrated real-time news updates from a News API. Implemented React Router for seamless navigation.",
       techStack: "React.js and Bootstrap",
@@ -27,7 +37,7 @@ const Project = () => {
       // DeploymentLink: "",
     },
     {
-      id: 1,
+      id: 2,
       title: "Todos List",
       desc: "Developed an intuitive single-page Todo List website with React and Bootstrap. Improved user productivity by allowing efficient task management.",
       techStack: "React.js",
@@ -36,7 +46,7 @@ const Project = () => {
       // DeploymentLink: "",
     },
     {
-      id: 2,
+      id: 3,
       title: "Microsoft Website Clone",
       desc: "Homepage of Microsoft official website consisting of responsive navbar, main content etc",
       techStack: "Tailwindcss and HTML",
