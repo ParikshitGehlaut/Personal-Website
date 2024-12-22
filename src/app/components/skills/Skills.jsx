@@ -9,6 +9,66 @@ const Skills = () => {
         <div className={styles.subset}>
           <div className={styles.skillImgContainer}>
             <Image
+              src="/cpp_logo.png"
+              alt="C++ logo"
+              height={30}
+              width={30}
+              className={styles.logoimg}
+            />
+          </div>
+          <span>C++ </span>
+        </div>
+        <div className={styles.subset}>
+          <div className={styles.skillImgContainer}>
+            <Image
+              src="/java_logo.png"
+              alt="Java logo"
+              height={30}
+              width={30}
+              className={styles.logoimg}
+            />
+          </div>
+          <span>Java</span>
+        </div>
+        <div className={styles.subset}>
+          <div className={styles.skillImgContainer}>
+            <Image
+              src="/python.webp"
+              alt="python logo"
+              height={30}
+              width={30}
+              className={styles.logoimg}
+            />
+          </div>
+          <span>Python</span>
+        </div>
+        <div className={styles.subset}>
+          <div className={styles.skillImgContainer}>
+            <Image
+              src="/js_logo.png"
+              alt="JS logo"
+              height={30}
+              width={30}
+              className={styles.logoimg}
+            />
+          </div>
+          <span>JavaScript</span>
+        </div>
+        <div className={styles.subset}>
+          <div className={styles.skillImgContainer}>
+            <Image
+              src="/pytorch_logo.png"
+              alt="PyTorch logo"
+              height={30}
+              width={30}
+              className={styles.logoimg}
+            />
+          </div>
+          <span>PyTorch</span>
+        </div>
+        <div className={styles.subset}>
+          <div className={styles.skillImgContainer}>
+            <Image
               src="/react.png"
               alt="reactJs logo"
               height={30}
@@ -33,42 +93,6 @@ const Skills = () => {
         <div className={styles.subset}>
           <div className={styles.skillImgContainer}>
             <Image
-              src="/C.png"
-              alt="C logo"
-              height={30}
-              width={30}
-              className={styles.logoimg}
-            />
-          </div>
-          <span>C Programming</span>
-        </div>
-        <div className={styles.subset}>
-          <div className={styles.skillImgContainer}>
-            <Image
-              src="/python.webp"
-              alt="python logo"
-              height={30}
-              width={30}
-              className={styles.logoimg}
-            />
-          </div>
-          <span>Python</span>
-        </div>
-        <div className={styles.subset}>
-          <div className={styles.skillImgContainer}>
-            <Image
-              src="/django-logo.webp"
-              alt="django logo"
-              height={30}
-              width={30}
-              className={styles.logoimg}
-            />
-          </div>
-          <span>Django</span>
-        </div>
-        <div className={styles.subset}>
-          <div className={styles.skillImgContainer}>
-            <Image
               src="/mongodb.webp"
               alt="mongodb logo"
               height={30}
@@ -77,6 +101,18 @@ const Skills = () => {
             />
           </div>
           <span>MongoDB</span>
+        </div>
+        <div className={styles.subset}>
+          <div className={styles.skillImgContainer}>
+            <Image
+              src="/tailwind.webp"
+              alt="TailwindCSS logo"
+              height={30}
+              width={30}
+              className={styles.logoimg}
+            />
+          </div>
+          <span>TailwindCSS</span>
         </div>
       </div>
     </div>

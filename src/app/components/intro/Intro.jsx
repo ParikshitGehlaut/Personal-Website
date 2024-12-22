@@ -12,7 +12,7 @@ const Intro = () => {
             {" "}
             <span className={styles.name}>Parikshit.</span>
           </b>{" "}
-          I am Passionate <b>Web developer</b> .
+          I am Passionate <b>Software developer</b> .
         </h1>
         <div className={styles.box}>
           <div className={styles.textContainer}>
@@ -22,14 +22,23 @@ const Intro = () => {
               Institute of Technology, Dharwad, India.
             </p>
             <p className={styles.boxDesc}>
-              I have experience working with React, Next.js and Django.
+              Currently, I am working as React Developer at Career Development Cell(CDC), IIT Dharwad. I am also part of 
+              Outreach team of Institution Innovation Council(IIC), IIT Dharwad.
             </p>
-            <Link
-              href="https://github.com/ParikshitGehlaut"
-              className={styles.button}
-            >
-              Visit Github
-            </Link>
+            <div className={styles.boxButton}>
+              <Link
+                href="https://github.com/ParikshitGehlaut"
+                className={styles.button}
+              >
+                Github
+              </Link>
+              <Link
+                href="https://drive.google.com/drive/u/0/folders/1PNt9FnFpijgFRR-aejdDVtWh1PXT8XeH"
+                className={styles.button}
+              >
+                Resume
+              </Link>
+            </div>
           </div>
           <div className={styles.imgContainer}>
             <Image

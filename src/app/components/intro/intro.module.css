@@ -35,6 +35,12 @@
     font-weight: 300;
     color: var(--softTextColor);
   }
+
+  .boxButton{
+    height: 50px;
+    display:flex;
+    gap: 20px;
+  }
   
   .button{
     padding: 16px 20px;
