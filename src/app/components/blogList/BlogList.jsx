@@ -6,7 +6,7 @@ const BlogList = () => {
   const posts = [
     {
       id: 1,
-      title: "AI",
+      title: "AI", 
       desc: "Introduction to Basic Machine Learning Algorithms",
       date: "4 Jan, 2024",
       link: "https://medium.com/@parikshitgehlaut/intro-to-basic-ml-algorithms-afb84e58abb3",
@@ -49,7 +49,7 @@ const BlogList = () => {
   ];
   return (
     <div className={styles.container}>
-      <h1 className={styles.Title}>Featured Blogs</h1>
+      <h1 className={styles.sectionTitle}>Featured Blogs</h1>
       <div className={styles.cardWrapper}>
         {posts.map((post) => (
           <Card post={post} key={post.id} />
