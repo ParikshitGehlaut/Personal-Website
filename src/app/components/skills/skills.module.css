@@ -1,47 +1,111 @@
-.skillContainer{
-    margin-bottom: 40px;
-}
-
-.skillContainer h1{
-    margin-top: 60px;
-    margin-bottom: 16px;
-    font-weight: bold;
-}
-
-.box{
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 auto;
-    width: 100%;
-    justify-content: space-evenly;
-}
-
-.subset{
-    background-color: var(--softBg);
-    color: var(--textColor);
-    border: 2px solid white;
-    border-radius: 9px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 20px;
-    height: 40px;
-    flex: 0 0 calc(33.33% - 20px);
-    margin: 10px;
-    padding: 20px;
-    box-sizing: border-box;
+.skillContainer {
+    margin-bottom: 60px; 
+    padding: 20px 0;
     text-align: center;
 }
+
+.skillContainer h1 {
+    font-size: 2.8em; 
+    margin-top: 40px; 
+    margin-bottom: 40px;
+    font-weight: bold;
+    color: var(--textColor);
+}
+
+.box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center; 
+    width: 100%;
+    max-width: 1000px; 
+    margin: 0 auto;
+}
+
+.subset {
+    background-color: var(--softBg);
+    color: var(--textColor);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px; 
+    flex: 0 0 calc(33.33% - 30px);
+    min-width: 180px;
+    height: auto; 
+    min-height: 150px; 
+    padding: 25px 20px;
+    box-sizing: border-box;
+    text-align: center;
+    box-shadow: 0 4px 8px var(--shadowColor);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.subset:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px var(--shadowColor);
+}
+
 .skillImgContainer{
-    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .logoimg{
-    object-fit: cover;
+    height: 48px;
+    width: 48px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
 }
 
-@media screen and (max-width: 768px){
-    .subset{
-        flex-basis: calc(50% - 20px);
+.subset:hover .logoimg {
+    transform: scale(1.1);
+}
+
+.skillName { 
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+
+@media screen and (max-width: 900px) {
+    .subset {
+        flex-basis: calc(50% - 25px);
+        min-width: 160px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .skillContainer h1 {
+        font-size: 2.2em;
+    }
+    .subset {
+        flex-basis: calc(50% - 25px); 
+        min-height: 130px;
+    }
+    .logoimg {
+        width: 40px;
+        height: 40px;
+    }
+    .skillName {
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .box {
+        gap: 20px;
+    }
+    .subset {
+        flex-basis: calc(100% - 20px); 
+        min-width: unset;
+        padding: 20px;
+    }
+    .skillContainer h1 {
+        font-size: 2em;
+        margin-bottom: 30px;
     }
 }

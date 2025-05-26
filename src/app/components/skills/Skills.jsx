@@ -1,119 +1,38 @@
 import React from "react";
 import styles from "./skills.module.css";
 import Image from "next/image";
+
 const Skills = () => {
+  const skillsData = [
+    { name: "C++", logo: "/cpp_logo.png", alt: "C++ logo" },
+    { name: "Java", logo: "/java_logo.png", alt: "Java logo" },
+    { name: "Python", logo: "/python.webp", alt: "Python logo" },
+    { name: "JavaScript", logo: "/js_logo.png", alt: "JS logo" },
+    { name: "PyTorch", logo: "/pytorch_logo.png", alt: "PyTorch logo" },
+    { name: "React", logo: "/react.png", alt: "ReactJS logo" },
+    { name: "Next.js", logo: "/next.webp", alt: "Next.js logo" },
+    { name: "MongoDB", logo: "/mongodb.webp", alt: "MongoDB logo" },
+    { name: "TailwindCSS", logo: "/tailwind.webp", alt: "TailwindCSS logo" },
+  ];
+
   return (
     <div className={styles.skillContainer}>
       <h1>Programming Skills</h1>
       <div className={styles.box}>
-        <div className={styles.subset}>
-          <div className={styles.skillImgContainer}>
-            <Image
-              src="/cpp_logo.png"
-              alt="C++ logo"
-              height={30}
-              width={30}
-              className={styles.logoimg}
-            />
+        {skillsData.map((skill) => (
+          <div className={styles.subset} key={skill.name}>
+            <div className={styles.skillImgContainer}>
+              <Image
+                src={skill.logo}
+                alt={skill.alt}
+                height={48}
+                width={48}  
+                className={styles.logoimg}
+              />
+            </div>
+            <span className={styles.skillName}>{skill.name}</span> {/* Added class here */}
           </div>
-          <span>C++ </span>
-        </div>
-        <div className={styles.subset}>
-          <div className={styles.skillImgContainer}>
-            <Image
-              src="/java_logo.png"
-              alt="Java logo"
-              height={30}
-              width={30}
-              className={styles.logoimg}
-            />
-          </div>
-          <span>Java</span>
-        </div>
-        <div className={styles.subset}>
-          <div className={styles.skillImgContainer}>
-            <Image
-              src="/python.webp"
-              alt="python logo"
-              height={30}
-              width={30}
-              className={styles.logoimg}
-            />
-          </div>
-          <span>Python</span>
-        </div>
-        <div className={styles.subset}>
-          <div className={styles.skillImgContainer}>
-            <Image
-              src="/js_logo.png"
-              alt="JS logo"
-              height={30}
-              width={30}
-              className={styles.logoimg}
-            />
-          </div>
-          <span>JavaScript</span>
-        </div>
-        <div className={styles.subset}>
-          <div className={styles.skillImgContainer}>
-            <Image
-              src="/pytorch_logo.png"
-              alt="PyTorch logo"
-              height={30}
-              width={30}
-              className={styles.logoimg}
-            />
-          </div>
-          <span>PyTorch</span>
-        </div>
-        <div className={styles.subset}>
-          <div className={styles.skillImgContainer}>
-            <Image
-              src="/react.png"
-              alt="reactJs logo"
-              height={30}
-              width={30}
-              className={styles.logoimg}
-            />
-          </div>
-          <span>React</span>
-        </div>
-        <div className={styles.subset}>
-          <div className={styles.skillImgContainer}>
-            <Image
-              src="/next.webp"
-              alt="Next.js logo"
-              height={30}
-              width={30}
-              className={styles.logoimg}
-            />
-          </div>
-          <span>Next.js</span>
-        </div>
-        <div className={styles.subset}>
-          <div className={styles.skillImgContainer}>
-            <Image
-              src="/mongodb.webp"
-              alt="mongodb logo"
-              height={30}
-              width={30}
-              className={styles.logoimg}
-            />
-          </div>
-          <span>MongoDB</span>
-        </div>
-        <div className={styles.subset}>
-          <div className={styles.skillImgContainer}>
-            <Image
-              src="/tailwind.webp"
-              alt="TailwindCSS logo"
-              height={30}
-              width={30}
-              className={styles.logoimg}
-            />
-          </div>
-          <span>TailwindCSS</span>
-        </div>
+        ))}
       </div>
     </div>
   );
