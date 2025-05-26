@@ -6,7 +6,7 @@ import ResponsiveNav from "../responsiveNav/ResponsiveNav";
 const Navbar = () => {
   return (
     <div className={styles.container}>
-      <div className={styles.logo}>Parikshit's Portfolio</div>
+      <div className={styles.logo}><Link href="/" className={styles.link}>Parikshit's Portfolio</Link></div>
       <div className={styles.links}>
         <Link href="/" className={styles.link}>
           Home
