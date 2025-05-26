@@ -25,7 +25,7 @@ const Intro = () => {
               Currently, I am working as React Developer at Career Development Cell(CDC), IIT Dharwad. I am also part of 
               Outreach team of Institution Innovation Council(IIC), IIT Dharwad.
             </p>
-            <div className={styles.boxButton}>
+            <div className={styles.boxButtonContainer}>
               <Link
                 href="https://github.com/ParikshitGehlaut"
                 className={styles.button}
