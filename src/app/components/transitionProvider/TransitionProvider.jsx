@@ -27,12 +27,6 @@ const TransitionProvider = ({ children }) => {
         >
           {pathname.substring(1)}
         </motion.div>
-        {/* <motion.div
-          key={pathname}
-          className={styles.motionScreentwo}
-          initial={{ height: "140vh" }}
-          animate={{ height: "0vh", transition: { delay: 1.5 } }}
-        /> */}
         <header className={styles.nav}>
           <Navbar />
         </header>

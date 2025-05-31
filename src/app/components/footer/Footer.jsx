@@ -19,7 +19,7 @@ const Footer = () => {
           <h1 className={styles.logoText}>Parikshit</h1>
         </div>
         <p className={styles.desc}>
-          Copyright &#169; All rights reserved | ParikshitGehlaut.com
+          Copyright &#169; 2025 All rights reserved | ParikshitGehlaut.com
         </p>
         <div className={styles.icons}>
           <Link
@@ -39,9 +39,9 @@ const Footer = () => {
             <Image src="/medium.webp" alt="" height={25} width={25} />
           </Link>
           <Link
-            href="https://twitter.com/I_AM_PARIKSHIT"
+            href="https://x.com/I_AM_PARIKSHIT"
             target="_blank"
-            title="Twitter"
+            title="X"
           >
             {" "}
             <Image src="/Twitter.webp" alt="" height={25} width={25} />
@@ -81,8 +81,8 @@ const Footer = () => {
           >
             Linkedin
           </Link>
-          <Link href="https://twitter.com/I_AM_PARIKSHIT" target="_blank">
-            Twitter
+          <Link href="https://x.com/I_AM_PARIKSHIT" target="_blank">
+            X
           </Link>
         </div>
       </div>

@@ -1,13 +1,12 @@
-import styles from "./page.module.css";
 import Intro from "./components/intro/Intro";
 import Skills from "./components/skills/Skills";
 import BlogList from "./components/blogList/BlogList";
 export default async function Home() {
   return (
-    <div className={styles.container}>
+    <div>
       <Intro />
       <Skills />
-      <div className={styles.content}>
+      <div>
         <BlogList />
       </div>
     </div>
