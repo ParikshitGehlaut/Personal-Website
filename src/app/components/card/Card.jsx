@@ -10,27 +10,23 @@ const variants = {
 
 const Card = ({ post }) => {
   return (
-    <>
-      <Link href={post.link} target="_blank">
-        <MotionDiv
-          variants={variants}
-          initial="hidden"
-          animate="visible"
-          transition={{
-            delay: post.id * 0.3,
-            ease: "easeInOut",
-            duration: 0.5,
-          }}
-          className={styles.card}
-        >
-          <div className={styles.cardTextContainer}>
-            <div className={styles.cardTitle}>{post.title}</div>
-            <div className={styles.cardDesc}>{post.desc}</div>
-            <div className={styles.date}>{post.date}</div>
-          </div>
-        </MotionDiv>
-      </Link>
-    </>
+    <Link href={post.link} target="_blank" className={styles.card}>
+      <MotionDiv
+        variants={variants}
+        initial="hidden"
+        animate="visible"
+        transition={{
+          delay: post.id * 0.3,
+          ease: "easeInOut",
+          duration: 0.5,
+        }}
+        className={styles.cardContent}
+      >
+        <div className={styles.cardPostTitle}>{post.title}</div>
+        <div className={styles.cardPostDesc}>{post.desc}</div>
+        <div className={styles.cardDate}>{post.date}</div>
+      </MotionDiv>
+    </Link>
   );
 };
 

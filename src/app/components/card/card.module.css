@@ -1,84 +1,82 @@
 .card {
-    background-color: var(--cardBg);
-    border: 1px solid var(--borderColor);
-    border-radius: 12px;
-    padding: 25px;       
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 15px;
-    color: var(--textColor);
-    text-decoration: none;
-    box-shadow: 0 5px 15px var(--cardShadow);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-    min-height: 200px;
-    height: 100%;
+  background-color: var(--cardBg);
+  border: 1px solid var(--borderColor);
+  border-radius: 12px;
+  padding: 25px;
+  display: flex;
+  text-decoration: none;
+  height: 100%;
+  box-shadow: 0 5px 15px var(--cardShadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  color: var(--textColor);
 }
 
 .card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 25px var(--cardHoverShadow);
-    border-color: var(--accentColor);
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px var(--cardHoverShadow);
+  border-color: var(--accentColor);
 }
-
 
 .cardContent {
-    display: flex;
-    flex-direction: column;
-    gap: 8px; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+  height: 100%;
 }
-
-.cardCategory { 
-    font-size: 0.85rem;
-    font-weight: 700;
-    color: var(--accentColor);
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-
 
 .cardPostTitle {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: var(--textColor);
-    line-height: 1.4;
-    margin: 0; 
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    min-height: calc(1.2rem * 1.4 * 2); 
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-height: calc(1.2rem * 1.4 * 2);
+}
+
+.cardPostDesc {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--softTextColor);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .cardDate {
-    font-size: 0.8rem;
-    color: var(--softTextColor);
-    margin-top: auto;
+  font-size: 0.8rem;
+  color: var(--softTextColor);
+  margin-top: auto;
 }
 
+@media screen and (max-width: 768px) {
+  .card {
+    padding: 20px;
+  }
 
-@media screen and (max-width: 768px) { 
-    .card {
-        padding: 20px;
-        min-height: 190px;
-        gap: 12px;
-    }
-    .cardPostTitle {
-        font-size: 1.1rem;
-        min-height: calc(1.1rem * 1.4 * 2);
-    }
-    .cardCategory {
-        font-size: 0.8rem;
-    }
+  .cardPostTitle {
+    font-size: 1.1rem;
+    min-height: calc(1.1rem * 1.4 * 2);
+  }
+
+  .cardCategory {
+    font-size: 0.8rem;
+  }
 }
 
 @media screen and (max-width: 480px) {
-    .card {
-        padding: 18px;
-        
-    }
-    .cardPostTitle {
-        font-size: 1.05rem;
-        min-height: calc(1.05rem * 1.4 * 2);
-    }
+  .card {
+    padding: 18px;
+  }
+
+  .cardPostTitle {
+    font-size: 1.05rem;
+    min-height: calc(1.05rem * 1.4 * 2);
+  }
 }
