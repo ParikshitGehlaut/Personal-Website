@@ -1,3 +1,6 @@
+export const dynamic = "force-dynamic";
+
+import { headers } from "next/headers";
 import React from "react";
 import styles from "./blogPost.module.css";
 import BlogList from "../components/blogList/BlogList";
@@ -9,8 +12,6 @@ export const metadata = {
     "Welcome to Blog section! you can read written by Parikshit Gehlaut.",
   robots: "index, follow",
 };
-
-import { headers } from "next/headers";
 
 const getData = async () => {
   try {
@@ -33,7 +34,6 @@ const getData = async () => {
   }
 };
 
-
 const page = async () => {
   const data = await getData();
   return (
@@ -42,8 +42,8 @@ const page = async () => {
         <BlogList />
       </div>
 
-      <div className="">
-        <h1 className={styles.sectionTitle} >Recents Posts</h1>
+      <div>
+        <h1 className={styles.sectionTitle}>Recents Posts</h1>
         {Array.isArray(data) ? (
           data.map((post) => <BlogItem key={post._id} item={post} />)
         ) : (
