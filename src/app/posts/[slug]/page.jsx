@@ -1,10 +1,16 @@
+export const dynamic = "force-dynamic";
+import { headers } from "next/headers";
 import styles from "./singlePage.module.css";
 import React from "react";
 import Image from "next/image";
 import BlogList from "@/app/components/blogList/BlogList";
 
 const getData = async (slug) => {
-  const res = await fetch(`http://localhost:3000/api/posts/${slug}`, {
+  const headersList = headers();
+  const host = headersList.get("host");
+  const protocol = process.env.NODE_ENV === "development" ? "http" : "https";
+
+  const res = await fetch(`${protocol}://${host}/api/posts/${slug}`, {
     cache: "no-store",
   });
 
@@ -24,18 +30,19 @@ const singlePage = async ({ params }) => {
       <h1 className={styles.title}>{data?.title}</h1>
 
       <div className={styles.user}>
-        
-          <div className={styles.userImageContainer}>
-            <Image
-              src="/myself.jpg"
-              alt="Parikshit Gehlaut"
-              fill
-              className={styles.avatar}
-            />
-          </div>
+        <div className={styles.userImageContainer}>
+          <Image
+            src="/myself.jpg"
+            alt="Parikshit Gehlaut"
+            fill
+            className={styles.avatar}
+          />
+        </div>
         <div className={styles.userTextContainer}>
           <span className={styles.username}>Parikshit Gehlaut</span>
-          <span className={styles.date}>{data.createdAt?.substring(0, 10)}</span>
+          <span className={styles.date}>
+            {data.createdAt?.substring(0, 10)}
+          </span>
         </div>
       </div>
 
@@ -53,7 +60,7 @@ const singlePage = async ({ params }) => {
       <div className={styles.description}>
         <div dangerouslySetInnerHTML={{ __html: data?.desc }} />
         <div className="">
-          <BlogList/>
+          <BlogList />
         </div>
       </div>
     </div>
