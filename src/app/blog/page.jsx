@@ -10,9 +10,15 @@ export const metadata = {
   robots: "index, follow",
 };
 
+import { headers } from "next/headers";
+
 const getData = async () => {
   try {
-   const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL || ""}/api/posts`, {
+    const headersList = headers();
+    const host = headersList.get("host");
+    const protocol = process.env.NODE_ENV === "development" ? "http" : "https";
+
+    const res = await fetch(`${protocol}://${host}/api/posts`, {
       cache: "no-store",
     });
 
@@ -26,6 +32,7 @@ const getData = async () => {
     return [];
   }
 };
+
 
 const page = async () => {
   const data = await getData();
