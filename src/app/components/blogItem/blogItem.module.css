@@ -1,0 +1,80 @@
+.container {
+  background-color: var(--cardBg);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.container:hover {
+  border:  1px solid var(--borderColor);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.detail {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #d1d5db;
+  font-weight: 400;
+}
+
+.date {
+  color: #9ca3af;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #f3f4f6;
+  margin: 0;
+}
+
+.desc {
+  font-size: 14px;
+  font-weight: 300;
+  color: #cbd5e1;
+}
+
+.link {
+  font-size: 13px;
+  font-weight: 500;
+  color: #f87171;
+  border-bottom: 1px solid #f87171;
+  width: max-content;
+  padding-bottom: 2px;
+  transition: color 0.2s ease;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: #fb7185;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 16px;
+  }
+
+  .title {
+    font-size: 16px;
+  }
+
+  .desc {
+    font-size: 13px;
+  }
+
+  .link {
+    font-size: 12px;
+  }
+}

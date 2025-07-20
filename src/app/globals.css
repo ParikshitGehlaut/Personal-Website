@@ -27,3 +27,15 @@ a{
   cursor: pointer;
 }
 
+.ql-container {
+  font-size: 28px !important;
+  color: white;
+}
+
+.quill > .ql-container > .ql-editor.ql-blank::before {
+  color: gray;
+  font-style: italic;
+  opacity: 0.6;
+}
+
+
