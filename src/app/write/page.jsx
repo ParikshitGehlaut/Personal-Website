@@ -3,17 +3,22 @@
 import Image from "next/image";
 import styles from "./writePage.module.css";
 import { useEffect, useRef, useState } from "react";
-import "react-quill/dist/quill.bubble.css";
 import { useRouter } from "next/navigation";
 import { createClient } from "@/utils/supabase/client";
 import dynamic from "next/dynamic";
 
+const ReactQuill = dynamic(() => import("react-quill"), {
+  ssr: false,
+  loading: () => <p>Loading editor…</p>,
+});
+
+
 const supabase = createClient();
 
-const WritePage = () => {
-  const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
+export default function WritePage() {
   const router = useRouter();
   const editorRef = useRef(null);
+
   const [open, setOpen] = useState(false);
   const [file, setFile] = useState(null);
   const [media, setMedia] = useState("");
@@ -23,55 +28,40 @@ const WritePage = () => {
   const [isPublishing, setIsPublishing] = useState(false);
   const [error, setError] = useState(null);
 
-  const handleQuillChange = (content, delta, source, editor) => {
-    setValue(content);
+  useEffect(() => {
     const editorElem = editorRef.current?.querySelector(".ql-editor");
     if (editorElem) {
-      setTimeout(() => {
-        editorElem.style.height = "auto";
-        editorElem.style.height = `${editorElem.scrollHeight}px`;
-      }, 0);
+      editorElem.style.height = "auto";
+      editorElem.style.height = `${editorElem.scrollHeight}px`;
     }
-  };
+  }, [value]);
 
   useEffect(() => {
-    const upload = async () => {
+    async function upload() {
       if (!file) return;
-
       setIsUploading(true);
       setError(null);
 
       try {
-        // Validate file size (e.g., max 5MB)
         if (file.size > 5 * 1024 * 1024) {
-          setError("File size exceeds 5MB limit");
-          setFile(null);
-          return;
+          throw new Error("File size exceeds 5 MB");
         }
-
-        const fileName = `${Date.now()}-${file.name}`;
-        const filePath = `uploads/${fileName}`;
-
-        const { error: uploadError } = await supabase.storage
+        const filePath = `uploads/${Date.now()}-${file.name}`;
+        const { error: upErr } = await supabase.storage
           .from("blog")
           .upload(filePath, file);
+        if (upErr) throw upErr;
 
-        if (uploadError) {
-          throw new Error(uploadError.message);
-        }
-
-        const { data: urlData } = supabase.storage
+        const { data } = supabase.storage
           .from("blog")
           .getPublicUrl(filePath);
-
-        setMedia(urlData.publicUrl);
+        setMedia(data.publicUrl);
       } catch (err) {
-        setError("Failed to upload image: " + err.message);
+        setError("Upload failed: " + err.message);
       } finally {
         setIsUploading(false);
       }
-    };
-
+    }
     upload();
   }, [file]);
 
@@ -84,17 +74,9 @@ const WritePage = () => {
       .replace(/^-+|-+$/g, "");
 
   const handleSubmit = async (e) => {
-    e.preventDefault(); // Prevent default form submission
-    
-    // Validate inputs
-    if (!title.trim()) {
-      setError("Title is required");
-      return;
-    }
-    if (!value.trim()) {
-      setError("Content is required");
-      return;
-    }
+    e.preventDefault();
+    if (!title.trim()) return setError("Title is required");
+    if (!value.trim()) return setError("Content is required");
 
     setIsPublishing(true);
     setError(null);
@@ -102,9 +84,7 @@ const WritePage = () => {
     try {
       const res = await fetch("/api/posts", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           title,
           desc: value,
@@ -112,11 +92,7 @@ const WritePage = () => {
           slug: slugify(title),
         }),
       });
-
-      if (!res.ok) {
-        throw new Error("Failed to publish post");
-      }
-
+      if (!res.ok) throw new Error("Failed to publish post");
       const data = await res.json();
       router.push(`/posts/${data.slug}`);
     } catch (err) {
@@ -129,7 +105,7 @@ const WritePage = () => {
   return (
     <div className={styles.container}>
       {error && <div className={styles.error}>{error}</div>}
-      
+
       <input
         type="text"
         placeholder="Title"
@@ -142,7 +118,7 @@ const WritePage = () => {
       <div className={styles.editor}>
         <button
           className={styles.button}
-          onClick={() => setOpen(!open)}
+          onClick={() => setOpen((o) => !o)}
           disabled={isUploading || isPublishing}
         >
           <Image src="/plus.png" alt="Add" width={16} height={16} />
@@ -151,18 +127,16 @@ const WritePage = () => {
         {open && (
           <div className={styles.add}>
             <input
-              type="file"
               id="image"
+              type="file"
               accept="image/*"
-              onChange={(e) => setFile(e.target.files[0])}
               style={{ display: "none" }}
+              onChange={(e) => setFile(e.target.files[0])}
               disabled={isUploading}
             />
-            <button className={styles.addButton} disabled={isUploading}>
-              <label htmlFor="image">
-                <Image src="/image.png" alt="Upload" width={16} height={16} />
-              </label>
-            </button>
+            <label htmlFor="image" className={styles.addButton}>
+              <Image src="/image.png" alt="Upload" width={16} height={16} />
+            </label>
           </div>
         )}
 
@@ -171,8 +145,8 @@ const WritePage = () => {
             className={styles.textArea}
             theme="bubble"
             value={value}
-            onChange={handleQuillChange}
-            placeholder="Tell your story..."
+            onChange={setValue}
+            placeholder="Tell your story…"
             readOnly={isPublishing}
           />
         </div>
@@ -183,10 +157,8 @@ const WritePage = () => {
         onClick={handleSubmit}
         disabled={isPublishing || isUploading}
       >
-        {isPublishing ? "Publishing..." : "Publish"}
+        {isPublishing ? "Publishing…" : "Publish"}
       </button>
     </div>
   );
-};
-
-export default WritePage;
+}

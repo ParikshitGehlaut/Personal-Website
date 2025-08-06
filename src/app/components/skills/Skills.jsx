@@ -12,7 +12,7 @@ const Skills = () => {
     { name: "React", logo: "/react.png", alt: "ReactJS logo" },
     { name: "Next.js", logo: "/next.webp", alt: "Next.js logo" },
     { name: "MongoDB", logo: "/mongodb.webp", alt: "MongoDB logo" },
-    { name: "TailwindCSS", logo: "/tailwind.webp", alt: "TailwindCSS logo" },
+    { name: "Prisma", logo: "/prisma.svg", alt: "Prisma logo" },
   ];
 
   return (
@@ -30,7 +30,7 @@ const Skills = () => {
                 className={styles.logoimg}
               />
             </div>
-            <span className={styles.skillName}>{skill.name}</span> {/* Added class here */}
+            <span className={styles.skillName}>{skill.name}</span>
           </div>
         ))}
       </div>
