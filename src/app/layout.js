@@ -8,11 +8,11 @@ const asul = Asul({
 
 export const metadata = {
   title: {
-    default: "Parikshit | Portfolio",
-    template: "%s | Parikshit",
+    default: "ParikshitGehlaut.com",
+    template: "%s | ParikshitGehlaut.com",
   },
   description:
-    "Welcome to Parikshit Gehlaut's Portfolio.I am beginner Full Stack developer.With a passion for creating stunning, functional websites, I'm here to bring your online vision to life. Contact me today to discuss your next project",
+    "Welcome to ParikshitGehlaut.com. I am beginner Full Stack developer. With a passion for creating stunning, functional websites, I'm here to bring your online vision to life. Contact me today to discuss your next project",
   robots: "index, follow",
 };
 
