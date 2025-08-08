@@ -3,7 +3,6 @@ import { headers } from "next/headers";
 import styles from "./singlePage.module.css";
 import React from "react";
 import Image from "next/image";
-import BlogList from "@/app/components/blogList/BlogList";
 
 const getData = async (slug) => {
   const headersList = headers();
@@ -59,9 +58,6 @@ const singlePage = async ({ params }) => {
 
       <div className={styles.description}>
         <div dangerouslySetInnerHTML={{ __html: data?.desc }} />
-        <div className="">
-          <BlogList />
-        </div>
       </div>
     </div>
   );

@@ -2,7 +2,7 @@ export const dynamic = "force-dynamic";
 import { headers } from "next/headers";
 import React from "react";
 import styles from "./blogPost.module.css";
-import BlogList from "../components/blogList/BlogList";
+// import BlogList from "../components/blogList/BlogList";
 import BlogItem from "../components/blogItem/BlogItem";
 
 export const metadata = {
@@ -37,14 +37,14 @@ const page = async () => {
   const data = await getData();
   return (
     <div className={styles.container}>
-      <div className={styles.content}>
+      {/* <div className={styles.content}>
         <BlogList />
-      </div>
+      </div> */}
 
       <div>
         <h1 className={styles.sectionTitle}>Recents Posts</h1>
         {Array.isArray(data) ? (
-          data.map((post) => <BlogItem key={post._id} item={post} />)
+          data.map((post) => <BlogItem key={post.id} item={post} />)
         ) : (
           <p>Posts couldn't be loaded.</p>
         )}
