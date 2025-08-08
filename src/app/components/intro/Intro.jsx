@@ -19,7 +19,7 @@ const Intro = () => {
             <h1 className={styles.boxTitle}>About Me</h1>
             <p className={styles.boxDesc}>
               Hello, I am Parikshit. I am a Computer Science student at Indian
-              Institute of Technology, Dharwad, India.
+              Institute of Technology Dharwad.
             </p>
             <p className={styles.boxDesc}>
               Currently, I am working as React Developer at Career Development Cell(CDC), IIT Dharwad. I am also part of 
@@ -28,12 +28,14 @@ const Intro = () => {
             <div className={styles.boxButtonContainer}>
               <Link
                 href="https://github.com/ParikshitGehlaut"
+                target="_blank"
                 className={styles.button}
               >
                 Github
               </Link>
               <Link
                 href="https://drive.google.com/drive/u/0/folders/1PNt9FnFpijgFRR-aejdDVtWh1PXT8XeH"
+                target="_blank"
                 className={styles.button}
               >
                 Resume
